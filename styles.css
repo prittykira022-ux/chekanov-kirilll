@@ -1,0 +1,183 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#080a14;font-family:Arial,sans-serif;-webkit-font-smoothing:antialiased}.page{width:900px;margin:0 auto;padding:0 120px}.logo{font-size:27px;line-height:14px;transform:rotate(-22deg)}nav{display:flex;padding:2px;background:#eaeaea;border-radius:32px}nav a{padding:5px 12px;border-radius:43px;font-size:14px;line-height:22px;letter-spacing:-.42px;color:#000;text-decoration:none;white-space:nowrap}nav a.active{background:#fff}.controls{display:flex;gap:4px}.controls button{border:0;background:#eaeaea;border-radius:32px;height:36px;width:48px;font-size:14px;font-weight:600}.intro{width:720px;padding:48px 24px 20px;display:flex;flex-direction:column;align-items:center;gap:24px}.avatar{width:227px;height:227px;border-radius:50%;background:radial-gradient(circle at 52% 35%,#f8c7a9 0 15%,transparent 16%),radial-gradient(circle at 50% 66%,#222 0 24%,transparent 25%),linear-gradient(145deg,#e9b99c,#6c5b52 48%,#e4c7b4)}.intro-copy{text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}.intro h1{font-size:24px;line-height:32px;letter-spacing:-.24px;margin:0;font-weight:600}.intro p{width:382px;margin:0;font-size:16px;line-height:24px;letter-spacing:-.16px}.available{font-size:12px;line-height:18px;letter-spacing:-.36px;display:flex;align-items:center;gap:4px}.available i{width:12px;height:12px;border-radius:50%;background:#41bd5b}.actions{display:flex;flex-direction:column;gap:8px}.actions > a{width:228px;padding:10px;border-radius:14px;text-align:center;font-size:16px;line-height:24px;text-decoration:none}.primary{background:#080a14;color:#fff}.secondary{background:#eaeaea;color:#000}.experience,.project,.concept{width:720px}.experience{padding:20px 0}.eyebrow{font-size:14px;line-height:22px;letter-spacing:-.42px;opacity:.4;margin:0 0 11px}.job{height:44px;border-top:1px solid rgba(0,0,0,.1);display:flex;gap:12px;align-items:center;padding:8px 0;font-size:14px}.job:last-child{border-bottom:1px solid rgba(0,0,0,.1)}.job b{font-weight:600;white-space:nowrap}.job em{height:12px;width:1px;background:#bfbfbf}.job>span:nth-of-type(2){opacity:.5;flex:1}.job time{font-size:12px;line-height:16px;opacity:.4;white-space:nowrap}.company-icon{width:24px;height:24px;border-radius:5px;display:grid;place-items:center;font-size:12px;font-weight:bold}.arbi{background:#0a0a0a;color:#fff}.finly{background:#ffdfe4}.kasta{background:#ffef43}.white{background:#fff;border:1px solid #eee;color:#111}.project{padding:32px 0}.visual{width:720px;border-radius:14px;background-size:cover;background-position:center}.finly-one{aspect-ratio:1000/740;background:linear-gradient(135deg,#5ec8e7,#e7f7fa 52%,#0b2935)}.finly-two{height:497px;background:linear-gradient(135deg,#111827,#d0d8e6 45%,#f5f7fb)}.project-meta{display:flex;align-items:center;gap:16px;margin-top:16px}.project-meta h2{font-size:16px;line-height:24px;letter-spacing:-.16px;font-weight:600;margin:0;flex:1}.project-meta div{display:flex;align-items:center;gap:16px;color:#818181;font-size:14px}.project-meta i{width:1px;height:12px;background:#d9d9d9}.concept{padding:32px 0 60px}.concept>h2{font-size:16px;line-height:24px;margin:0 0 16px}.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.screen{border-radius:14px;background:linear-gradient(145deg,#d4dae4,#39465d 48%,#f6d5c8);min-height:260px}.screen.one{aspect-ratio:860/1080}.concept-grid>div{display:flex;flex-direction:column;gap:12px}.concept-grid .two,.concept-grid .three{height:calc(50% - 6px)}.screen.four{background:linear-gradient(145deg,#e6d0cb,#454d5f)}@media(max-width:900px){.page{width:100%;padding:0 24px}.experience,.project,.concept,.intro{width:100%}.visual{width:100%}.intro p{width:min(382px,100%)}}
+/* Fluid Functionalism interaction layer */
+body{transition:background .45s cubic-bezier(.22,1,.36,1),color .45s cubic-bezier(.22,1,.36,1)}nav a,.controls button,.actions > a{transition:transform .35s cubic-bezier(.22,1,.36,1),font-weight .25s ease,background .35s ease,color .35s ease}nav a:hover,.controls button:hover,.actions > a:hover{transform:translateY(-2px)}.job{transition:background .35s cubic-bezier(.22,1,.36,1),padding .35s cubic-bezier(.22,1,.36,1)}.job:hover{background:#f4f4f4;padding-left:8px;padding-right:8px;border-radius:10px}.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}.reveal.visible{opacity:1;transform:translateY(0)}body.dark{background:#080a14;color:#fff}body.dark .secondary,body.dark .controls button{background:#202331;color:#fff}body.dark .job:hover{background:#1b1f2b}
+/* SF Pro typography from the Figma text styles */
+:root{font-family:"SF Pro Text Local","SF Pro Display Local","Segoe UI",Arial,sans-serif;font-synthesis:none}
+body{font-family:inherit;letter-spacing:-.01em}
+.logo{font-family:"SF Pro Display Local","SF Pro Text Local",sans-serif;font-weight:600}
+nav a,.controls button{font-family:"SF Pro Text Local",sans-serif;font-size:14px;line-height:22px;font-weight:510;letter-spacing:-.42px}
+.intro h1{font-family:"SF Pro Display Local","SF Pro Text Local",sans-serif;font-size:24px;line-height:32px;font-weight:510;letter-spacing:-.24px}
+.intro p{font-family:"SF Pro Text Local",sans-serif;font-size:16px;line-height:24px;font-weight:400;letter-spacing:-.16px}
+.available{font-family:"SF Pro Text Local",sans-serif;font-size:12px;line-height:18px;font-weight:400;letter-spacing:-.36px}
+.actions > a{font-family:"SF Pro Text Local",sans-serif;font-size:16px;line-height:24px;font-weight:510;letter-spacing:-.16px}
+.eyebrow{font-family:"SF Pro Text Local",sans-serif;font-size:14px;line-height:22px;font-weight:400;letter-spacing:-.42px}
+.job{font-family:"SF Pro Text Local",sans-serif;font-size:14px;line-height:22px;letter-spacing:-.42px}.job b{font-weight:510}.job time{font-size:12px;line-height:16px;font-weight:400;letter-spacing:-.36px}
+.project-meta h2,.concept>h2{font-family:"SF Pro Text Local",sans-serif;font-weight:510}.project-meta div{font-family:"SF Pro Text Local",sans-serif;font-weight:400}
+.avatar{background-image:url("file:///C:/Users/pritt/Downloads/Ellipse%202.png");background-size:cover;background-position:center}.finly-one{background-image:url("./assets/finly-cover-4.png");background-size:cover;background-position:center}.finly-two{background-image:url("file:///C:/Users/pritt/Downloads/Finly%20%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0%201-1.png");background-size:cover;background-position:center}.screen.one{background-image:url("file:///C:/Users/pritt/Downloads/Screen%201%201.png");background-size:cover;background-position:center}.screen.two{background-image:url("file:///C:/Users/pritt/Downloads/Screen%202%201.png");background-size:cover;background-position:center}.screen.three{background-image:url("file:///C:/Users/pritt/Downloads/Screen%203%201.png");background-size:cover;background-position:center}.screen.four{background-image:url("file:///C:/Users/pritt/Downloads/Screen%204%201.png");background-size:cover;background-position:center}
+.job:nth-child(1) .company-icon{background:url("file:///C:/Users/pritt/Downloads/Frame%205.svg") center/contain no-repeat;background-color:transparent;color:transparent}.job:nth-child(2) .company-icon{background:url("file:///C:/Users/pritt/Downloads/Frame%206.svg") center/contain no-repeat;background-color:transparent;color:transparent}.job:nth-child(3) .company-icon{background:url("file:///C:/Users/pritt/Downloads/Frame%206-1.svg") center/contain no-repeat;background-color:transparent;color:transparent}.job:nth-child(4) .company-icon{background:url("file:///C:/Users/pritt/Downloads/Frame%207.svg") center/contain no-repeat;background-color:transparent;color:transparent}
+.experience .job,.experience .job:hover{transition:none;background:transparent;padding-left:0;padding-right:0;border-radius:0}.experience .job:hover{transform:none}
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;gap:12px;align-items:stretch}.concept-grid>.screen.one{grid-column:1;grid-row:1 / span 2;min-height:0;height:100%;background-image:url("file:///C:/Users/pritt/Downloads/Screen%201%201.png");background-size:contain;background-repeat:no-repeat;background-color:#f4f4f4;background-position:center}.concept-grid>div{display:contents}.concept-grid>.screen.four{grid-column:1;grid-row:3;min-height:300px;background-image:url("file:///C:/Users/pritt/Downloads/Frame%202131330711.png");background-size:contain;background-repeat:no-repeat;background-color:#f4f4f4;background-position:center}.concept-grid>.screen.four:after{content:""}.concept-grid:after{content:"";grid-column:2;grid-row:3;min-height:300px;border-radius:14px;background:#f4f4f4 url("file:///C:/Users/pritt/Downloads/Screen%204%201.png") center/contain no-repeat}.concept-grid>.screen.two{grid-column:2;grid-row:1;min-height:0;height:100%;background-image:url("file:///C:/Users/pritt/Downloads/Screen%202%201.png");background-size:contain;background-repeat:no-repeat;background-color:#3b3e43;background-position:center}.concept-grid>.screen.three{grid-column:2;grid-row:2;min-height:0;height:100%;background-image:url("file:///C:/Users/pritt/Downloads/Screen%203%201.png");background-size:contain;background-repeat:no-repeat;background-color:#f4f4f4;background-position:center}.concept-grid .screen{border-radius:14px;overflow:hidden;min-height:0}.concept-grid>.screen.one,.concept-grid>.screen.four,.concept-grid:after{aspect-ratio:1 / 1}.concept-grid>.screen.two,.concept-grid>.screen.three{aspect-ratio:1.72 / 1}
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr auto;gap:12px;align-items:stretch}.concept-grid>div{display:flex;flex-direction:column;gap:12px;min-width:0}.concept-grid>.screen.one{grid-column:1;grid-row:1 / span 2;min-height:520px;height:auto;background-color:#f4f4f4}.concept-grid>div:not(.screen){grid-column:2;grid-row:1 / span 2;min-height:520px}.concept-grid>.screen.two,.concept-grid>.screen.three{height:auto;flex:1;min-height:0}.concept-grid>.screen.four{grid-column:1;grid-row:3;min-height:300px;background-color:#f4f4f4}.concept-grid:after{grid-column:2;grid-row:3;min-height:300px;background-color:#f4f4f4}
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}.concept-grid .concept-item{margin:0;background:#f3f3f3;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center}.concept-grid .concept-item img{display:block;width:100%;height:100%;object-fit:contain}.concept-grid .item-1{grid-column:1;grid-row:1 / span 2;aspect-ratio:860/1080}.concept-grid .item-2,.concept-grid .item-3{aspect-ratio:860/540}.concept-grid .item-4{grid-column:1;grid-row:3;aspect-ratio:860/1080}.concept-grid .item-5{grid-column:2;grid-row:3;aspect-ratio:860/1080}.concept-grid .item-6{grid-column:1 / span 2;aspect-ratio:1000/740}.portfolio-video{display:block;width:720px;height:auto;max-height:720px;object-fit:contain;margin:32px 0;border-radius:14px;background:#f3f3f3}
+.concept-grid:after{content:none!important}.concept-grid .concept-item{min-height:0!important;height:auto!important}
+.concept-grid .screen.one{display:block!important;min-height:520px!important;background:#f4f4f4 url('https://www.figma.com/api/mcp/asset/b747e66e-e29f-485b-a540-56c46b083a7b.png') center/contain no-repeat!important}.concept-grid .screen.two{display:block!important;min-height:250px!important;background:#3b3e43 url('https://www.figma.com/api/mcp/asset/22cd659b-0f94-4d4e-b98c-26162ae11f01.png') center/contain no-repeat!important}.concept-grid .screen.three{display:block!important;min-height:250px!important;background:#f4f4f4 url('https://www.figma.com/api/mcp/asset/a60140b5-b087-4a41-a168-fc0ed1967641.png') center/contain no-repeat!important}.concept-grid .screen.four{display:block!important;min-height:300px!important;background:#f4f4f4 url('https://www.figma.com/api/mcp/asset/9f24e6a8-5dcd-4210-b039-ebc3555018fa.png') center/contain no-repeat!important}
+.concept-grid{display:flex!important;flex-direction:column!important;gap:12px!important}.figma-concept-row{display:flex;gap:12px;width:100%}.figma-concept-row img{display:block;width:100%;height:100%;object-fit:cover;border-radius:14px}.figma-concept-row.row1{height:360px}.figma-concept-row.row1>img{width:50%}.figma-concept-row.row1>div{width:50%;display:flex;flex-direction:column;gap:12px}.figma-concept-row.row2{height:489px}.figma-concept-row.row2>img{width:50%}.figma-concept-row.row2>div{width:50%;background:#f4f4f4;border-radius:14px}.figma-concept-row.row3{height:352px}.figma-concept-row.row3>img{width:50%}
+.concept-grid{display:grid!important;grid-template-columns:1fr 1fr!important;grid-auto-rows:auto!important;gap:12px!important}.concept-final-item{margin:0;min-width:0;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:#f4f4f4}.concept-final-item img{display:block;width:100%;height:100%;object-fit:cover}.concept-final-item:first-child{grid-row:span 2;aspect-ratio:860/1080}.concept-final-item:nth-child(6),.concept-final-item:nth-child(7){aspect-ratio:860/1080}
+.concept-vertical-image{display:block!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;border-radius:14px!important;background:#f4f4f4}
+.concept-grid{display:flex!important;flex-direction:column!important;gap:16px!important;width:100%!important}.concept-grid>div{display:contents!important}.concept-grid .screen{display:block!important;width:100%!important;height:360px!important;min-height:0!important;border-radius:14px!important;background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;background-color:#f4f4f4!important}.concept-grid .screen.one{background-image:url('file:///C:/Users/pritt/Downloads/%D0%AD%D0%BA%D1%80%D0%B0%D0%BD%201244.png')!important}.concept-grid .screen.one:after{content:"";display:block;width:100%;height:100%;border-radius:14px;background:url('file:///C:/Users/pritt/Downloads/Frame%202131330711.png') center/contain no-repeat #f4f4f4}.concept-grid .screen.two{background-image:url('file:///C:/Users/pritt/Downloads/Frame%202131330498-1.png')!important}.concept-grid .screen.two:after{content:"";display:block;width:100%;height:100%;border-radius:14px;background:url('file:///C:/Users/pritt/Downloads/Screen%201%201.png') center/contain no-repeat #f4f4f4}.concept-grid .screen.three{background-image:url('file:///C:/Users/pritt/Downloads/Screen%202%201.png')!important}.concept-grid .screen.three:after{content:"";display:block;width:100%;height:100%;border-radius:14px;background:url('file:///C:/Users/pritt/Downloads/Screen%203%201.png') center/contain no-repeat #f4f4f4}.concept-grid .screen.four{background-image:url('file:///C:/Users/pritt/Downloads/Screen%204%201.png')!important}.concept-grid .screen.four:after{content:"";display:block;width:100%;height:100%;border-radius:14px;background:url('file:///C:/Users/pritt/Downloads/Screen%204%201-1.png') center/contain no-repeat #f4f4f4}
+.concept-grid::after{content:""!important;display:block!important;width:100%!important;height:360px!important;border-radius:14px!important;background:#f4f4f4 url('file:///C:/Users/pritt/Downloads/Screen%204%201-1.png') center/contain no-repeat!important}
+.carousel{display:block!important;width:100%!important}.carousel-viewport{position:relative;width:100%;overflow:hidden;border-radius:14px;background:#f4f4f4}.carousel-track{display:flex;width:100%;transition:transform .5s cubic-bezier(.22,1,.36,1)}.carousel-slide{flex:0 0 100%;margin:0;aspect-ratio:860/1080;background:#f4f4f4}.carousel-slide img{display:block;width:100%;height:100%;object-fit:contain;border-radius:14px}.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;border-radius:50%;background:rgba(8,10,20,.84);color:#fff;font-size:28px;line-height:1;cursor:pointer;transition:transform .35s cubic-bezier(.22,1,.36,1),background .35s ease}.carousel-arrow:hover{transform:translateY(-50%) scale(1.08);background:#080a14}.carousel-arrow.prev{left:16px}.carousel-arrow.next{right:16px}.carousel-dots{display:flex;justify-content:center;gap:6px;padding:14px 0 0}.carousel-dots button{width:7px;height:7px;border:0;border-radius:99px;background:#d2d2d2;padding:0;cursor:pointer;transition:width .4s cubic-bezier(.22,1,.36,1),background .4s ease}.carousel-dots button.active{width:24px;background:#080a14}
+/* Figma UI Concept section */
+.figma-gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}.figma-card{margin:0;overflow:hidden;border-radius:14px;background:#f4f4f4;min-width:0}.figma-card img{display:block;width:100%;height:100%;object-fit:cover}.figma-card.card-tall{grid-column:1;grid-row:1 / span 2;aspect-ratio:860/1080}.figma-card.card-chart,.figma-card.card-people{aspect-ratio:860/540}.figma-card.card-hero{grid-column:1 / span 2;aspect-ratio:1000/740}.figma-card.card-mobile,.figma-card.card-extra{aspect-ratio:860/1080}.figma-card.card-extra{grid-column:1}.figma-card.card-mobile.dark{grid-column:2}.figma-card.card-mobile img,.figma-card.card-extra img{object-fit:contain}.figma-card.card-hero img{object-fit:cover}@media(max-width:640px){.figma-gallery{grid-template-columns:1fr;gap:10px}.figma-card.card-tall,.figma-card.card-hero,.figma-card.card-extra,.figma-card.card-mobile.dark{grid-column:auto;grid-row:auto}.figma-card.card-chart,.figma-card.card-people{aspect-ratio:860/540}}
+/* UI Concept layout from Figma node 98:19272 */
+.figma-gallery-v2{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch}.figma-card-v2{margin:0;min-width:0;overflow:hidden;border-radius:14px;background:#f4f4f4;aspect-ratio:860/540}.figma-card-v2 img{display:block;width:100%;height:100%;object-fit:contain}.figma-card-v2.tall{grid-row:span 2;aspect-ratio:860/1080}.figma-card-v2.chart{background:#3d3e42}.figma-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0;aspect-ratio:860/540}.figma-pair .figma-card-v2{height:100%;aspect-ratio:auto}.figma-gallery-v2>.figma-card-v2:nth-last-child(2),.figma-gallery-v2>.figma-card-v2:last-child{aspect-ratio:860/1080}.figma-gallery-v2>.figma-card-v2:nth-last-child(2) img,.figma-gallery-v2>.figma-card-v2:last-child img{object-fit:contain}@media(max-width:640px){.figma-gallery-v2{grid-template-columns:1fr;gap:10px}.figma-card-v2.tall,.figma-card-v2.chart,.figma-gallery-v2>.figma-card-v2:nth-last-child(2),.figma-gallery-v2>.figma-card-v2:last-child{grid-row:auto;aspect-ratio:860/1080}.figma-pair{aspect-ratio:860/540}}
+/* Exact Figma node 98:19272 composition */
+.figma-gallery-exact{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;gap:12px;align-items:stretch}.exact-card{margin:0;min-width:0;overflow:hidden;border-radius:14px;background:#f4f4f4}.exact-card img{display:block;width:100%;height:100%;object-fit:cover}.exact-tall{grid-column:1;grid-row:1 / span 2;aspect-ratio:860/1080}.exact-stack{grid-column:2;grid-row:1;display:flex;flex-direction:column;gap:12px;min-width:0;aspect-ratio:860/540}.exact-stack .exact-card{flex:1;min-height:0}.figma-gallery-exact>.exact-card:nth-of-type(3){grid-column:1;grid-row:2;height:489px}.figma-gallery-exact>.exact-card:nth-of-type(4){grid-column:2;grid-row:2;height:489px}.figma-gallery-exact>.exact-card:nth-of-type(5){grid-column:1;grid-row:3;height:352px}.figma-gallery-exact>.exact-card:nth-of-type(6){grid-column:2;grid-row:3;height:352px}.exact-empty{background:#f4f4f4}@media(max-width:640px){.figma-gallery-exact{grid-template-columns:1fr;grid-template-rows:auto}.exact-tall,.exact-stack,.figma-gallery-exact>.exact-card:nth-of-type(3),.figma-gallery-exact>.exact-card:nth-of-type(4),.figma-gallery-exact>.exact-card:nth-of-type(5),.figma-gallery-exact>.exact-card:nth-of-type(6){grid-column:1;grid-row:auto;height:auto;aspect-ratio:860/540}.exact-tall{aspect-ratio:860/1080}.exact-stack{aspect-ratio:860/540}.exact-empty{display:none}}
+.figma-gallery-exact .exact-row2-left{grid-column:1;grid-row:2;height:489px}.figma-gallery-exact .exact-row2-empty{grid-column:2;grid-row:2;height:489px}.figma-gallery-exact .exact-row3-left{grid-column:1;grid-row:3;height:352px}.figma-gallery-exact .exact-row3-right{grid-column:2;grid-row:3;height:352px}@media(max-width:640px){.figma-gallery-exact .exact-row2-left,.figma-gallery-exact .exact-row2-empty,.figma-gallery-exact .exact-row3-left,.figma-gallery-exact .exact-row3-right{grid-column:1;grid-row:auto;height:auto;aspect-ratio:860/540}}
+/* Final alignment correction for Figma 98:19272 */
+.figma-gallery-exact{display:grid!important;grid-template-columns:1fr 1fr!important;grid-template-rows:auto auto auto!important;gap:12px!important;align-items:stretch!important}.figma-gallery-exact>.exact-tall{grid-column:1!important;grid-row:1!important;aspect-ratio:860/1080!important;height:auto!important}.figma-gallery-exact>.exact-stack{grid-column:2!important;grid-row:1!important;aspect-ratio:auto!important;height:100%!important;min-height:0!important}.figma-gallery-exact>.exact-stack>.exact-card{height:auto!important;min-height:0!important;flex:1 1 0!important}.figma-gallery-exact>.exact-row2-left,.figma-gallery-exact>.exact-row2-empty{grid-row:2!important;height:489px!important}.figma-gallery-exact>.exact-row3-left,.figma-gallery-exact>.exact-row3-right{grid-row:3!important;height:352px!important}.figma-gallery-exact>.exact-row2-left,.figma-gallery-exact>.exact-row3-left{grid-column:1!important}.figma-gallery-exact>.exact-row2-empty,.figma-gallery-exact>.exact-row3-right{grid-column:2!important}@media(max-width:640px){.figma-gallery-exact{display:grid!important;grid-template-columns:1fr!important;grid-template-rows:auto!important}.figma-gallery-exact>.exact-tall,.figma-gallery-exact>.exact-stack,.figma-gallery-exact>.exact-row2-left,.figma-gallery-exact>.exact-row2-empty,.figma-gallery-exact>.exact-row3-left,.figma-gallery-exact>.exact-row3-right{grid-column:1!important;grid-row:auto!important;height:auto!important;aspect-ratio:860/540!important}.figma-gallery-exact>.exact-tall{aspect-ratio:860/1080!important}.figma-gallery-exact>.exact-row2-empty{display:none!important}}
+.figma-gallery-exact .video-card{background:#f4f4f4;display:flex;align-items:center;justify-content:center}.figma-gallery-exact .video-card video{display:block;width:100%;height:100%;object-fit:contain;border-radius:14px}
+.project-image-link{display:block;color:inherit;text-decoration:none}.project-image-link .visual{transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .45s ease}.project-image-link:hover .visual{transform:scale(.985)}body{opacity:1;transition:opacity .24s ease}.page-leaving{opacity:0}.case-page{animation:case-reveal .5s cubic-bezier(.22,1,.36,1)}@keyframes case-reveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* Local SF Pro files from chrstph-gg/sf-windows. */
+@font-face{font-family:"SF Pro Text Local";src:url("./assets/fonts/sf-pro/SF-Pro-Text-Regular.otf") format("opentype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"SF Pro Text Local";src:url("./assets/fonts/sf-pro/SF-Pro-Text-Medium.otf") format("opentype");font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:"SF Pro Text Local";src:url("./assets/fonts/sf-pro/SF-Pro-Text-Semibold.otf") format("opentype");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"SF Pro Text Local";src:url("./assets/fonts/sf-pro/SF-Pro-Text-Bold.otf") format("opentype");font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"SF Pro Display Local";src:url("./assets/fonts/sf-pro/SF-Pro-Display-Regular.otf") format("opentype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"SF Pro Display Local";src:url("./assets/fonts/sf-pro/SF-Pro-Display-Medium.otf") format("opentype");font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:"SF Pro Display Local";src:url("./assets/fonts/sf-pro/SF-Pro-Display-Semibold.otf") format("opentype");font-style:normal;font-weight:600;font-display:swap}
+/* Compact SF Pro web faces for Latin and Cyrillic. The original faces cover other glyphs. */
+@font-face{font-family:"SF Pro Text Local";src:url("./assets/fonts/sf-pro/SF-Pro-Text-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap;unicode-range:U+0000-024F,U+0250-02FF,U+0300-036F,U+0400-052F,U+1C80-1C8F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+2190-21FF,U+2212,U+2301,U+2600-26FF,U+27E8-27E9,U+FEFF,U+FFFD}
+@font-face{font-family:"SF Pro Text Local";src:url("./assets/fonts/sf-pro/SF-Pro-Text-Medium.woff2") format("woff2");font-style:normal;font-weight:500;font-display:swap;unicode-range:U+0000-024F,U+0250-02FF,U+0300-036F,U+0400-052F,U+1C80-1C8F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+2190-21FF,U+2212,U+2301,U+2600-26FF,U+27E8-27E9,U+FEFF,U+FFFD}
+@font-face{font-family:"SF Pro Text Local";src:url("./assets/fonts/sf-pro/SF-Pro-Text-Semibold.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap;unicode-range:U+0000-024F,U+0250-02FF,U+0300-036F,U+0400-052F,U+1C80-1C8F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+2190-21FF,U+2212,U+2301,U+2600-26FF,U+27E8-27E9,U+FEFF,U+FFFD}
+@font-face{font-family:"SF Pro Text Local";src:url("./assets/fonts/sf-pro/SF-Pro-Text-Bold.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap;unicode-range:U+0000-024F,U+0250-02FF,U+0300-036F,U+0400-052F,U+1C80-1C8F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+2190-21FF,U+2212,U+2301,U+2600-26FF,U+27E8-27E9,U+FEFF,U+FFFD}
+@font-face{font-family:"SF Pro Display Local";src:url("./assets/fonts/sf-pro/SF-Pro-Display-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap;unicode-range:U+0000-024F,U+0250-02FF,U+0300-036F,U+0400-052F,U+1C80-1C8F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+2190-21FF,U+2212,U+2301,U+2600-26FF,U+27E8-27E9,U+FEFF,U+FFFD}
+@font-face{font-family:"SF Pro Display Local";src:url("./assets/fonts/sf-pro/SF-Pro-Display-Medium.woff2") format("woff2");font-style:normal;font-weight:500;font-display:swap;unicode-range:U+0000-024F,U+0250-02FF,U+0300-036F,U+0400-052F,U+1C80-1C8F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+2190-21FF,U+2212,U+2301,U+2600-26FF,U+27E8-27E9,U+FEFF,U+FFFD}
+@font-face{font-family:"SF Pro Display Local";src:url("./assets/fonts/sf-pro/SF-Pro-Display-Semibold.woff2") format("woff2");font-style:normal;font-weight:600;font-display:swap;unicode-range:U+0000-024F,U+0250-02FF,U+0300-036F,U+0400-052F,U+1C80-1C8F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+2190-21FF,U+2212,U+2301,U+2600-26FF,U+27E8-27E9,U+FEFF,U+FFFD}
+html,body{font-family:"SF Pro Text Local","Segoe UI",Arial,sans-serif}
+ .logo,.intro h1{font-family:"SF Pro Display Local","SF Pro Text Local","Segoe UI",Arial,sans-serif}
+button,a,input,textarea,select{font-family:inherit}
+.page{position:relative}
+.contact-anchor{position:relative}
+.contact-trigger{display:block;border:0;cursor:pointer}
+.actions .contact-trigger{width:228px;padding:10px;border-radius:14px;text-align:center;font-size:16px;line-height:24px;font-weight:400}
+.contact-dropdown{position:absolute;z-index:20;top:calc(100% + 8px);left:50%;width:280px;padding:16px;background:#fff;border-radius:16px;box-shadow:0 1px 6px rgba(0,0,0,.15);display:flex;flex-direction:column;gap:11px;opacity:0;transform:translate(-50%,-8px) scale(.98);transform-origin:top center;pointer-events:none;visibility:hidden;transition:opacity .24s ease,transform .3s cubic-bezier(.22,1,.36,1),visibility 0s linear .3s}
+.contact-dropdown.is-open{opacity:1;transform:translate(-50%,0) scale(1);pointer-events:auto;visibility:visible;transition-delay:0s}
+.contact-dropdown-head{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;font-size:14px;line-height:22px;letter-spacing:-.42px}
+.contact-dropdown-head>span{flex:1}
+.contact-close{width:18px;height:18px;padding:0;border:0;background:transparent;cursor:pointer;display:grid;place-items:center}
+.contact-close img{display:block;width:18px;height:18px}
+.contact-row{display:flex;align-items:center;gap:12px;height:44px;color:#080a14;text-decoration:none}
+.contact-icon{width:28px;height:28px;border-radius:6px;display:grid;place-items:center;flex:0 0 28px}
+.contact-icon img{display:block;max-width:none}
+.contact-row>span:last-child{display:flex;flex-direction:column;gap:2px}
+.contact-row small{font-size:12px;line-height:16px;letter-spacing:-.36px;opacity:.4}
+.contact-row b{font-size:14px;line-height:22px;letter-spacing:-.42px;font-weight:500}
+
+
+/* Final Figma typography mapping */
+html,body{font-family:"SF Pro Text Local","Segoe UI",Arial,sans-serif;font-synthesis:none;font-variation-settings:"wdth" 100}
+.logo,.intro h1{font-family:"SF Pro Display Local","SF Pro Text Local","Segoe UI",Arial,sans-serif}
+nav a,.controls button{font-family:"SF Pro Text Local",sans-serif;font-size:14px;line-height:22px;font-weight:400;letter-spacing:-.42px}
+.intro h1{font-size:24px;line-height:32px;font-weight:500;letter-spacing:-.24px}
+.intro p{font-family:"SF Pro Text Local",sans-serif;font-size:16px;line-height:24px;font-weight:400;letter-spacing:-.16px}
+.available{font-family:"SF Pro Text Local",sans-serif;font-size:12px;line-height:18px;font-weight:400;letter-spacing:-.36px}
+.actions > a,.actions .contact-trigger{font-family:"SF Pro Text Local",sans-serif;font-size:16px;line-height:24px;font-weight:400;letter-spacing:-.16px}
+.eyebrow{font-family:"SF Pro Text Local",sans-serif;font-size:14px;line-height:22px;font-weight:400;letter-spacing:-.42px}
+.job{font-family:"SF Pro Text Local",sans-serif;font-size:14px;line-height:22px;font-weight:400;letter-spacing:-.42px}
+.job b{font-weight:500}.job time{font-family:"SF Pro Text Local",sans-serif;font-size:12px;line-height:16px;font-weight:400;letter-spacing:-.36px}
+.project-meta h2,.concept>h2{font-family:"SF Pro Text Local",sans-serif;font-size:16px;line-height:24px;font-weight:400;letter-spacing:-.16px}
+.project-meta div{font-family:"SF Pro Text Local",sans-serif;font-size:14px;line-height:24px;font-weight:400;letter-spacing:0}
+.contact-dropdown-head{font-family:"SF Pro Text Local",sans-serif;font-size:14px;line-height:22px;font-weight:400;letter-spacing:-.42px}
+.contact-row small{font-family:"SF Pro Text Local",sans-serif;font-size:12px;line-height:16px;font-weight:400;letter-spacing:-.36px}
+.contact-row b{font-family:"SF Pro Text Local",sans-serif;font-size:14px;line-height:22px;font-weight:500;letter-spacing:-.42px}
+/* Contact dropdown variant from Figma node 169:26660 */
+.contact-dropdown{padding:16px 8px;gap:11px}
+.contact-dropdown-head{padding:0 8px}
+.contact-dropdown .contact-row{height:auto;min-height:40px;padding:6px 8px;border-radius:12px;gap:12px}
+.contact-dropdown .contact-icon{background:#efefef}
+.contact-dropdown .contact-row>span:last-child{gap:0}
+.contact-dropdown .contact-row small{font-size:11px;line-height:16px;letter-spacing:-.33px}
+.contact-dropdown .contact-row b{font-size:14px;line-height:22px;letter-spacing:-.42px;font-weight:400}
+
+@media (prefers-reduced-motion: no-preference) {
+  .section-page main {
+    animation: section-content-enter 480ms cubic-bezier(0.35, 0, 0.25, 1);
+  }
+
+  .scroll-reveal-pending {
+    opacity: 0.55;
+  }
+
+  .scroll-reveal-visible {
+    transition: opacity 480ms cubic-bezier(0.35, 0, 0.25, 1);
+  }
+
+  .scroll-reveal-pending:focus-within {
+    opacity: 1;
+  }
+}
+
+@keyframes section-content-enter {
+  from { opacity: 0.55; }
+  to { opacity: 1; }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100%, 900px);
+  margin-inline: auto;
+  padding: 20px 24px;
+}
+
+.header:has(> nav) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+}
+
+.header:has(> nav) > .controls {
+  justify-self: end;
+}
+
+.header nav a {
+  text-align: center;
+}
+
+.header .controls button {
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  font-weight: 500;
+}
+
+.header img {
+  display: block;
+  flex-shrink: 0;
+}
+
+@media (min-width: 421px) {
+  .header nav a:first-child {
+    min-width: 71px;
+  }
+
+  .header nav a:last-child {
+    min-width: 79px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    padding-inline: 12px;
+  }
+
+  .header nav a {
+    padding-inline: 8px;
+  }
+
+  .header .controls button {
+    width: 36px;
+  }
+}

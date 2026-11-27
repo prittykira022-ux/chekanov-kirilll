@@ -1,0 +1,278 @@
+:root {
+  color-scheme: light;
+  --background: #fff;
+  --foreground: #080a14;
+  --muted-foreground: #606471;
+  --popover: #fff;
+  --secondary: #eaeaea;
+  --accent: #eaeaea;
+  --border: #dddfe4;
+  --ring: #2853a6;
+  --primary: #080a14;
+  --primary-foreground: #fff;
+  --success: #247333;
+}
+
+/* shadcn/ui Neutral dark tokens, applied to the existing HTML controls. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --popover: oklch(0.205 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --success: #81dc9d;
+}
+
+html,
+body,
+body.about-page,
+.finly-page {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+:where(a, button):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+.header nav,
+.header .controls button,
+.finly-header .controls button,
+.secondary,
+.finly-header :is(.back-link, .pill),
+.gallery-back {
+  background: var(--secondary);
+  color: var(--foreground);
+}
+
+.header nav a {
+  color: var(--foreground);
+}
+
+.header nav a.active {
+  background: var(--background);
+}
+
+.controls button {
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  cursor: pointer;
+}
+
+:is(.header nav a, .controls button, .actions > a) {
+  transition-property: transform;
+}
+
+.finly-actions {
+  align-items: center;
+}
+
+.finly-actions .pill {
+  white-space: nowrap;
+}
+
+.gallery-back {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 36px;
+  border-radius: 32px;
+  font-size: 28px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.contact-dropdown {
+  background: var(--popover);
+  color: var(--foreground);
+}
+
+.contact-row,
+.finly-footer a {
+  color: var(--foreground);
+}
+
+.contact-row:is(:hover, :focus-visible) {
+  background: var(--accent);
+}
+
+.contact-row small,
+.project-meta div,
+.eyebrow,
+.job time,
+.job > span:nth-of-type(2),
+.about-bio p,
+.about-job-copy,
+.about-job ul,
+.about-date,
+.about-footer div,
+.finly-copy > div > p:last-child,
+.finly-copy > div > div,
+.finly-footer span {
+  color: var(--muted-foreground);
+  opacity: 1;
+}
+
+.job,
+.job:last-child,
+.about-job {
+  border-color: var(--border);
+}
+
+.finly-copy .solution > p:first-child {
+  color: var(--success);
+}
+
+.ui-concept-block {
+  color: var(--foreground);
+}
+
+[data-theme="dark"] :is(.header > img, [data-theme-toggle] img) {
+  filter: invert(1);
+}
+
+/* Default Base Tabs appearance on page links, using aria-current for selection. */
+[data-theme="dark"] .header nav {
+  align-items: center;
+  min-height: 32px;
+  padding: 3px;
+  border-radius: 8px;
+  background: var(--muted);
+}
+
+[data-theme="dark"] .header nav a {
+  padding-block: 1px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--muted-foreground);
+}
+
+[data-theme="dark"] .header nav a:hover {
+  color: var(--foreground);
+  transform: none;
+}
+
+[data-theme="dark"] .header nav a[aria-current="page"] {
+  border-color: var(--input);
+  background: color-mix(in oklab, var(--input) 30%, transparent);
+  color: var(--foreground);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+}
+
+[data-theme="dark"] .header nav a:focus-visible {
+  border-color: var(--ring);
+  outline-offset: 1px;
+}
+
+[data-theme="dark"] .contact-dropdown {
+  box-shadow: 0 6px 24px rgb(0 0 0 / 45%), 0 0 0 1px var(--border);
+}
+
+[data-theme="dark"] .contact-icon {
+  background: var(--secondary);
+}
+
+[data-theme="dark"] .contact-icon img {
+  filter: brightness(0) invert(0.88);
+}
+
+[data-theme="dark"] .contact-close img {
+  filter: brightness(1.1);
+}
+
+[data-theme="dark"] :is(.job em, .project-meta i) {
+  background: var(--input);
+}
+
+[data-theme="dark"] .available i {
+  background: #79d897;
+}
+
+[data-theme="dark"] :is(.exact-card, .video-card, .ui-carousel, .ui-slide) {
+  background: var(--card);
+}
+
+[data-theme="dark"] .about-photos figure {
+  background: var(--secondary);
+  filter: drop-shadow(0 2px 6px rgb(0 0 0 / 45%));
+}
+
+[data-theme="dark"] .ui-dot {
+  background: var(--muted-foreground);
+}
+
+[data-theme="dark"] .ui-dot-active {
+  background: var(--primary);
+}
+
+[data-theme="dark"] .ui-arrow {
+  border: 1px solid var(--input);
+  background: var(--popover);
+  color: var(--foreground);
+}
+
+[data-theme="dark"] .ui-arrow:hover {
+  background: var(--accent);
+}
+
+@media (max-width: 420px) {
+  .finly-header {
+    min-height: 72px;
+    height: auto;
+    gap: 8px;
+    padding-inline: 12px;
+  }
+
+  .finly-header .back-link {
+    flex-shrink: 0;
+  }
+
+  .finly-header .controls button {
+    width: 36px;
+  }
+
+  .finly-actions {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .experience .job {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) auto;
+    gap: 0 8px;
+    min-height: 44px;
+    height: auto;
+  }
+
+  .experience .job em {
+    display: none;
+  }
+
+  .experience .job b {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .experience .job time {
+    grid-column: 2 / -1;
+    white-space: normal;
+  }
+}

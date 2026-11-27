@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Обо мне — Кирилл Чеканов</title>
+  <script src="./site-preferences.js"></script><link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./about.css">
+  <link rel="stylesheet" href="./appearance.css"><script defer src="./site-language.js"></script><script defer src="./assets/vendor/foley/foley.js"></script>
+  <script defer src="./interface-sounds.js"></script>
+  <script defer src="./scroll-reveal.js"></script>
+</head>
+<body class="about-page section-page">
+  <header class="header" id="top">
+    <img src="./assets/about/wordmark.svg" alt="Кирилл">
+    <nav aria-label="Разделы портфолио">
+      <a href="./index.html" data-foley-click="switch" data-foley-navigate>работа</a>
+      <a class="active" href="#top" aria-current="page" data-foley-click="switch">обо мне</a>
+    </nav>
+    <div class="controls">
+      <button type="button" data-lang-toggle aria-label="Переключить язык на английский" data-foley-click="on">Ru</button>
+      <button type="button" data-theme-toggle aria-label="Тёмная тема" aria-pressed="false" data-foley-click="on">
+        <img src="./assets/about/sun.svg" alt="">
+      </button>
+    </div>
+  </header>
+
+  <main class="about-main">
+    <section class="about-bio" aria-labelledby="about-title">
+      <h1 id="about-title">Обо мне</h1>
+      <p>Продуктовый дизайнер с опытом около 3 лет в HR-tech, финтехе и цифровых продуктах. Проектирую интерфейсы для web и mobile на всех этапах: от исследования пользователей и определения задачи до прототипирования, тестирования и передачи решений в разработку.</p>
+      <p>Работал над HR-платформой для соискателей и работодателей, CRM-системой для финансового учёта и развитием существующих цифровых продуктов. Создаю дизайн-системы, упрощаю сложные пользовательские сценарии и выстраиваю понятные интерфейсы для разных ролей.</p>
+      <p>Эффективно работаю с продуктовой, аналитической и технической командами: умею объяснять дизайн-решения, учитывать бизнес-цели и доводить задачи до реализации.</p>
+    </section>
+
+    <div class="about-photos" data-scroll-reveal>
+      <figure><img src="./assets/about/photo-1.png" decoding="async" alt="Кирилл на берегу моря"></figure>
+      <figure><img src="./assets/about/photo-2.png" decoding="async" alt="Кирилл с друзьями на фоне гор"></figure>
+      <figure><img src="./assets/about/photo-3.png" decoding="async" alt="Кирилл в каске и спасательном жилете"></figure>
+      <figure><img src="./assets/about/photo-4.png" decoding="async" alt="Кирилл на пляже"></figure>
+    </div>
+
+    <section class="about-experience" aria-labelledby="experience-title">
+      <h2 id="experience-title" data-scroll-reveal>Опыт работы</h2>
+      <article class="about-job" data-scroll-reveal>
+        <header>
+          <h3>Finly</h3>
+          <p class="about-date">Янв. 2025 — Март 2026</p>
+        </header>
+        <p class="about-role">Product Designer <img src="./assets/about/separator.svg" alt=""> <span>web, mobile</span></p>
+        <p class="about-job-copy">Разрабатывал CRM-систему для менеджеров, бухгалтеров и руководителей. Отвечал за полный цикл дизайна: исследование задач пользователей, проектирование сценариев, создание интерфейсов и развитие дизайн-системы.</p>
+        <ul>
+          <li>Создал дизайн-систему для сложных таблиц, форм и дашбордов.</li>
+          <li>Спроектировал ключевые CRM-сценарии для разных ролей пользователей.</li>
+          <li>Проводил usability-тестирования и улучшал интерфейсы перед релизом.</li>
+        </ul>
+      </article>
+      <article class="about-job" data-scroll-reveal>
+        <header>
+          <h3>ArbiHunter</h3>
+          <p class="about-date">Дек. 2024 — н.в.</p>
+        </header>
+        <p class="about-role">Product Designer <img src="./assets/about/separator.svg" alt=""> <span>web, mobile</span></p>
+        <p class="about-job-copy">Развивал HR-платформу для соискателей и работодателей. Проектировал и обновлял пользовательские сценарии, поддерживал дизайн-систему и готовил решения к передаче в разработку.</p>
+        <ul>
+          <li>Расширил дизайн-систему и внедрил переиспользуемые компоненты.</li>
+          <li>Переработал ключевые экраны и улучшил согласованность интерфейса.</li>
+          <li>Использовал прототипы и структурированные презентации для согласования решений со стейкхолдерами.</li>
+        </ul>
+      </article>
+      <article class="about-job" data-scroll-reveal>
+        <header>
+          <h3>Else</h3>
+          <p class="about-date">Март 2023 — Янв. 2024</p>
+        </header>
+        <p class="about-role">Web Designer <img src="./assets/about/separator.svg" alt=""> <span>web, mobile</span></p>
+        <p class="about-job-copy">Создавал интерфейсы и визуальные решения для web- и mobile-продуктов, учитывая задачи пользователей и требования бизнеса.</p>
+        <ul>
+          <li>Проектировал страницы и пользовательские сценарии.</li>
+          <li>Работал над визуальной системой и единообразием интерфейсов.</li>
+          <li>Готовил макеты и прототипы для передачи в разработку.</li>
+        </ul>
+      </article>
+    </section>
+
+    <footer class="about-footer" data-scroll-reveal>
+      <p>Готов к сотрудничеству над новыми проектами или просто рад встрече — не стесняйтесь обращаться!</p>
+      <div>
+        <a href="mailto:deepend.202@yandex.ru" data-foley-click="bubble">Email</a>
+        <a href="https://t.me/kirillchek2" target="_blank" rel="noreferrer" data-foley-click="bubble">Telegram</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

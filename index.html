@@ -1,0 +1,115 @@
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Кирилл Чеканов — Product Designer</title><script src="./site-preferences.js"></script><link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./appearance.css"><script defer src="./site-language.js"></script><script defer src="./assets/vendor/foley/foley.js"></script><script defer src="./interface-sounds.js"></script><script defer src="./scroll-reveal.js"></script></head><body class="section-page">
+  <header class="header" id="top">
+    <img src="./assets/about/wordmark.svg" alt="Кирилл">
+    <nav aria-label="Разделы портфолио">
+      <a class="active" href="#top" aria-current="page" data-foley-click="switch">работа</a>
+      <a href="./about.html" data-foley-click="switch" data-foley-navigate>обо мне</a>
+    </nav>
+    <div class="controls">
+      <button type="button" data-lang-toggle aria-label="Переключить язык на английский" data-foley-click="on">Ru</button>
+      <button type="button" data-theme-toggle aria-label="Тёмная тема" aria-pressed="false" data-foley-click="on">
+        <img src="./assets/about/sun.svg" alt="">
+      </button>
+    </div>
+  </header>
+  <div class="page"><main><section class="intro" id="about"><div class="avatar"></div><div class="intro-copy"><h1>Кирилл Чеканов</h1><p>проектирую цифровые продукты, в которых сложное становится понятным.</p><span class="available"><i></i>Открыт к работе</span></div><div class="actions">
+  <div class="contact-anchor">
+    <button data-foley-click="bubble" class="primary contact-trigger" type="button" aria-expanded="false" aria-controls="contact-dropdown">Связаться</button>
+    <div class="contact-dropdown" id="contact-dropdown" aria-hidden="true"><div class="contact-dropdown-head"><span>Контакты</span><button data-foley-click="bubble" class="contact-close" type="button" aria-label="Закрыть контакты"><img src="./assets/contact/icon-1.svg" alt=""></button></div><a class="contact-row" data-foley-click="bubble" href="mailto:deepend.202@yandex.ru"><span class="contact-icon"><img src="./assets/contact/icon-3.svg" alt=""></span><span><small>Email</small><b>deepend.202@yandex.ru</b></span></a><a class="contact-row" data-foley-click="bubble" href="https://t.me/kirillchek2" target="_blank" rel="noreferrer"><span class="contact-icon"><img src="./assets/contact/icon-2.svg" alt=""></span><span><small>Telegram</small><b>kirillchek2</b></span></a></div>
+  </div>
+  <a class="secondary" href="https://drive.google.com/file/d/1_dlGE38-fNKj9p1RUcoeKkhlpnw8facz/view?usp=sharing" target="_blank" rel="noopener" data-foley-click="bubble">CV</a>
+</div></section><section class="experience" data-scroll-reveal><p class="eyebrow">Опыт</p><div class="jobs"><div class="job"><span class="company-icon arbi">A</span><b>ArbiHunter.com</b><em></em><span>Product Designer</span><time>Дек. 2024 — н.в.</time></div><div class="job"><span class="company-icon finly">F</span><b>Finly</b><em></em><span>Product Designer</span><time>Янв. 2025 — Март 2026</time></div><div class="job"><span class="company-icon kasta">K</span><b>Kasta</b><em></em><span>Product Designer</span><time>Авг. 2025 — Дек. 2025</time></div><div class="job"><span class="company-icon arbi white">A</span><b>ArbiHunter.com</b><em></em><span>Web Designer</span><time>Март 2023 — Янв. 2024</time></div></div></section><section class="project" data-scroll-reveal id="work"><a class="project-image-link" href="./finly.html" aria-label="Открыть кейс Finly"><div class="visual finly-one"></div></a><div class="project-meta"><h2>Веб интерфейс для учета денег и управления</h2><div><span>Web</span><i></i><span>Mobile</span></div></div></section><section class="project" data-scroll-reveal><div class="visual finly-two"></div><div class="project-meta"><h2>Веб интерфейс и моб. приложение для сервиса по поиску работы</h2><div><span>Web</span><i></i><span>Mobile</span></div></div></section><section class="concept" id="ui-concept"><h2>UI Concept</h2><div class="figma-gallery-exact"><figure class="exact-card exact-tall" data-scroll-reveal><img src="./assets/figma-ui-concept/screen-1.png" loading="lazy" decoding="async" alt="UI Concept экран с балансом"></figure><div class="exact-stack"><figure class="exact-card" data-scroll-reveal><img src="./assets/figma-ui-concept/screen-2.png" loading="lazy" decoding="async" alt="UI Concept экран с графиком"></figure><figure class="exact-card" data-scroll-reveal><img src="./assets/figma-ui-concept/screen-3-user.png" loading="lazy" decoding="async" alt="UI Concept экран с контактами"></figure></div><figure class="exact-card exact-row2-left" data-scroll-reveal><img src="./assets/figma-ui-concept/frame-0499.png" loading="lazy" decoding="async" alt="UI Concept экран кошелька"></figure><figure class="exact-card exact-row2-empty video-card" data-scroll-reveal><video src="./assets/figma-ui-concept/ui-concept-recording.mp4" data-autoplay-on-view muted loop playsinline controls preload="none" aria-label="Запись UI Concept"></video></figure><figure class="exact-card exact-row3-left" data-scroll-reveal><img src="./assets/figma-ui-concept/frame-0498.png" loading="lazy" decoding="async" alt="UI Concept экран потоков"></figure><figure class="exact-card exact-row3-right" data-scroll-reveal><img src="./assets/figma-ui-concept/screen-4.png" loading="lazy" decoding="async" alt="UI Concept финальный экран"></figure></div></section></main></div><script>
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('.carousel');
+  if (!carousel) return;
+  const track = carousel.querySelector('.carousel-track');
+  const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
+  const dots = carousel.querySelector('.carousel-dots');
+  const previous = carousel.querySelector('.carousel-arrow.prev');
+  const next = carousel.querySelector('.carousel-arrow.next');
+  let index = 0;
+  let startX = null;
+
+  track.style.width = (slides.length * 100) + '%';
+  slides.forEach(function (slide) {
+    slide.style.width = (100 / slides.length) + '%';
+  });
+
+  function goTo(nextIndex) {
+    index = (nextIndex + slides.length) % slides.length;
+    track.style.transform = 'translate3d(-' + (index * (100 / slides.length)) + '%, 0, 0)';
+    dots.querySelectorAll('button').forEach(function (dot, dotIndex) {
+      dot.classList.toggle('active', dotIndex === index);
+      dot.setAttribute('aria-selected', dotIndex === index ? 'true' : 'false');
+    });
+  }
+
+  slides.forEach(function (_, slideIndex) {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.dataset.foleyClick = 'bubble';
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', 'Перейти к слайду ' + (slideIndex + 1));
+    dot.addEventListener('click', function () { goTo(slideIndex); });
+    dots.appendChild(dot);
+  });
+
+  previous.addEventListener('click', function () { goTo(index - 1); });
+  next.addEventListener('click', function () { goTo(index + 1); });
+  carousel.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowLeft') goTo(index - 1);
+    if (event.key === 'ArrowRight') goTo(index + 1);
+  });
+  carousel.addEventListener('touchstart', function (event) { startX = event.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', function (event) {
+    if (startX === null) return;
+    const distance = event.changedTouches[0].clientX - startX;
+    if (Math.abs(distance) > 45) goTo(index + (distance < 0 ? 1 : -1));
+    startX = null;
+  }, { passive: true });
+  goTo(0);
+});
+</script><script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.body.classList.add('page-ready');
+  document.querySelectorAll('.project-image-link').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      document.body.classList.add('page-leaving');
+      window.setTimeout(function () { window.location.href = link.href; }, 240);
+    });
+  });
+});
+</script><script>
+document.addEventListener('DOMContentLoaded', function () {
+  var trigger = document.querySelector('.contact-trigger');
+  var dropdown = document.getElementById('contact-dropdown');
+  var close = document.querySelector('.contact-close');
+  if (!trigger || !dropdown) return;
+  function setOpen(open) {
+    trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    dropdown.setAttribute('aria-hidden', open ? 'false' : 'true');
+    dropdown.classList.toggle('is-open', open);
+  }
+  trigger.addEventListener('click', function () { setOpen(!dropdown.classList.contains('is-open')); });
+  if (close) close.addEventListener('click', function () { setOpen(false); });
+  document.addEventListener('click', function (event) {
+    if (!dropdown.contains(event.target) && !trigger.contains(event.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') setOpen(false);
+  });
+});
+</script></body></html>
+
+
+
+
+
+
+
+
+
+
+
